@@ -1,0 +1,11 @@
+{
+    "swagger": "2.0",
+    "produces": ["application/json"],
+    "paths": {
+        "/test":{
+            "get" :{
+
+            }
+        }
+    }
+}
