@@ -4,7 +4,22 @@
     "paths": {
         "/test":{
             "get" :{
-
+                "parameter":[
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200":{
+                        "description": "ok"
+                    },
+                    "404":{
+                        "description": "not valid"
+                    }
+                }
             }
         }
     }
