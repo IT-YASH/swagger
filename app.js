@@ -8,9 +8,12 @@ app.use("/api-docs",swaggerUI.serve,swaggerUI.setup(swaggerJsdocs))
 
 
 
-app.get("/test",(req,res)=>{
+app.get("instagram",(req,res)=>{
     res.status(200) 
-    res.send("this is hello world")
+  });
+
+app.get("facebook",(req,res)=>{
+    res.status(200) 
   });
  
             

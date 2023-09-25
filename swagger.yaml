@@ -5,7 +5,69 @@ info:
   version: 1.0.1
 
 servers:
-  - url: http://localhost:4000/api/v1
+  - url: https://localhost:3000/
     description: this is the local version of our app
-  - url: http://localhost:4000/api/v1
+  - url: http://localhost:4000/
     description: this one is just for demo
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+    BearerAuth:
+      type: http
+      scheme: bearer
+
+
+paths:
+  /instagram:
+    get:
+      summary: its return username and follows
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: string
+      
+    post:
+      summary: its return username and follows
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: string
+  
+  /facebook:
+    get:
+      summary: returns whatever is there in parameter
+      parameters:
+        - name : Yash
+          default: 5
+          in: path 
+          schema:
+            type: string 
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
