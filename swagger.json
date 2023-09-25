@@ -15,6 +15,9 @@
                 "responses":{
                     "200":{
                         "description": "ok"
+                    },
+                    "400":{
+                        "description": "not valid"
                     }
                 }
             }
