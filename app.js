@@ -1,11 +1,10 @@
 const express = require("express");
 const swaggerUI = require("swagger-ui-express");
-const json = require("json");
-const swaggerJsdocs = json.load("./swagger.json");
+const data = require('./swagger.json');
 const app = express();
 const port = 3000;
 app.use(express.json());
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerJsdocs));
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(data));
 
 let users = [{ name: "yash" }, { name: "devansh" }];
 
@@ -23,7 +22,7 @@ app.get("/test", (req, res) => {
         firstName: firstname,
       });
     }
-  }
+  } 
 });
 
 app.listen(port, () => {
