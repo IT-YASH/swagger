@@ -6,7 +6,7 @@ const port = 3000;
 app.use(express.json());
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(data));
 
-let users = [{ name: "yash" }, { name: "devansh" }];
+let users = [{name: "yash" }, {name: "devansh" }];
 
 app.get("/test", (req, res) => {
   const firstname = users.find((x) => x.name);

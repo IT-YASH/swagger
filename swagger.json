@@ -4,7 +4,7 @@
     "paths": {
         "/test":{
             "get" :{
-                "parameter":[
+                "parameters":[
                     {
                         "name": "username",
                         "in": "path",
@@ -16,7 +16,7 @@
                     "200":{
                         "description": "ok"
                     },
-                    "404":{
+                    "400":{
                         "description": "not valid"
                     }
                 }
