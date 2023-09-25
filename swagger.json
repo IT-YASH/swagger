@@ -7,10 +7,10 @@
                 "parameters":[
                     {
                         "name": "username",
-                        "in": "path",
+                        "in": "body",
                         "required": true,
                         "type": "string"
-                    }
+                    }   
                 ],
                 "responses":{
                     "200":{
