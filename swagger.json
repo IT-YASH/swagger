@@ -2,12 +2,12 @@
     "swagger": "2.0",
     "produces": ["application/json"],
     "paths": {
-        "/test":{
+        "/test/{username}":{
             "get" :{
                 "parameters":[
                     {
+                        "in": "path",
                         "name": "username",
-                        "in": "body",
                         "required": true,
                         "type": "string"
                     }   
