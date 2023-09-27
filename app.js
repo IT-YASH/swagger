@@ -8,7 +8,8 @@ app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(data));
 
 app.get("/test/:username", (req, res) => {
   if (req.body) {
-    let test = req.body.username;
+    let test = req.params.username;
+    console.log(test)
     if (test) {
       res.status(200).json({
         status: "SUCCESS",
