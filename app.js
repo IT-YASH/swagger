@@ -14,8 +14,8 @@ app.get("/test/:username", (req, res) => {
       res.status(200).json({
         status: "SUCCESS",
         message: `${test}`,
-      });
-    } else if (!test) {
+      });   
+    } else if (!test) {  
       res.status(400).json({
         status: "FAIL",
         toast: "Missing parameter",
